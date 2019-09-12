@@ -1,2 +1,3 @@
 #!/bin/bash
-usermod -u root betty
+usermod -l betty vagrant
+
