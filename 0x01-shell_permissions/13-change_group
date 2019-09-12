@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vagrant:holberton hello
+chgrp vagrant:holberton hello
