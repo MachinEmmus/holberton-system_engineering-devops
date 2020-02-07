@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Print Holberton School with while loop
+n=0
+while ((n < 10))
+do
+	echo "Holberton School"
+	n=$((n+1))
+done
