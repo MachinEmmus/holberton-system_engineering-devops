@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill and change output
+pkill -f "bash ./7-highlander"

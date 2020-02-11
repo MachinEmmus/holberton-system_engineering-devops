@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Procces in Execution all
+ps -auxf
