@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Activate ports
+netstat -l -p
