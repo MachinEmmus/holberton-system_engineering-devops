@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """API"""
+import csv
 import requests
 import sys
 
-
 if __name__ == "__main__":
+    """API"""
     user_id = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
     response = requests.get(url)
