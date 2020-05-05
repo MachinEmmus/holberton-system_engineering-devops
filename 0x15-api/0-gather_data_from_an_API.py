@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+"""API"""
 import requests
 import sys
 
 
-def tasks_done(id):
-    """Script that displays an employee completed TODO tasks in stout"""
-
+if __name__ == "__main__":
+    """API"""
+    id = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/users/{}".format(id)
     response = requests.get(url)
     response_json = response.json()
@@ -22,13 +23,8 @@ def tasks_done(id):
     for task in todos_json:
         if task.get("completed") is True:
             task_completed += 1
-            task_list += "\t " + task.get("title") + "\n"
-
+            task_list += "     {}\n".format(task.get("title"))
     print("Employee {} is done with tasks({}/{}):".format(name_employee,
                                                           task_completed,
                                                           number_tasks))
     print(task_list[:-1])
-
-
-if __name__ == "__main__":
-    tasks_done(sys.argv[1])
