@@ -3,7 +3,6 @@
 import requests
 import sys
 
-
 if __name__ == "__main__":
     """API"""
     id = sys.argv[1]
@@ -11,7 +10,6 @@ if __name__ == "__main__":
     response = requests.get(url)
     response_json = response.json()
     name_employee = response_json.get("name")
-
     url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
     todos = requests.get(url)
     todos_json = todos.json()
@@ -23,7 +21,7 @@ if __name__ == "__main__":
     for task in todos_json:
         if task.get("completed") is True:
             task_completed += 1
-            task_list += "     {}\n".format(task.get("title"))
+            task_list += "\t {}\n".format(task.get("title"))
     print("Employee {} is done with tasks({}/{}):".format(name_employee,
                                                           task_completed,
                                                           number_tasks))
