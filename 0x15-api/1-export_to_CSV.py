@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""API"""
 import requests
 import sys
 
@@ -22,7 +23,7 @@ if __name__ == "__main__":
         for todo in todos_json:
             completed = todo.get("completed")
             title = todo.get("title")
-            data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(user_id, 
+            data = "\"{}\",\"{}\",\"{}\",\"{}\"\n".format(user_id,
                                                           employee_name,
                                                           completed, title)
             fd.write(data)
