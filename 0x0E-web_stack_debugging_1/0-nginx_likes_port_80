@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Nginx must be running
+chmod 777 /etc/nginx/sites-enabled/default
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx restar
