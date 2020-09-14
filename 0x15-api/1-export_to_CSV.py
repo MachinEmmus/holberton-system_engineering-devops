@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""API"""
+"""API https://jsonplaceholder.typicode.com/"""
 import csv
 import requests
 import sys
