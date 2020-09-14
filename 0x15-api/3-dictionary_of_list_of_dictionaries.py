@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""API REST"""
 import json
 import requests
 
